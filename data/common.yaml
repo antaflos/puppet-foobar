@@ -1,0 +1,3 @@
+---
+foobar::service_name: foobard
+foobar::service_ensure: running
