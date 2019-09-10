@@ -20,14 +20,14 @@ Vagrant.configure("2") do |config|
     node.vm.box = "ubuntu/bionic64"
   end
 end
-``` 
+```
 
 Set up the Vagrant VM:
 
 ```
 mkdir vagrant-foobar-pdktest
 cd vagrant-foobar-pdktest
-wget https://github.com/antaflos/puppet-foobar/Vagrantfile [TODO]
+wget https://raw.githubusercontent.com/antaflos/puppet-foobar/master/Vagrantfile
 vagrant up
 ```
 
@@ -35,7 +35,7 @@ Once the Vagrant VM is up connect to it and set up Git, PDK and clone the Puppet
 
 ```
 vagrant ssh bionic01
-
+sudo -s
 apt-get update
 apt-get install git
 wget http://apt.puppet.com/pool/bionic/puppet/p/pdk/pdk_1.13.0.0-1bionic_amd64.deb
