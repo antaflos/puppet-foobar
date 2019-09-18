@@ -31,15 +31,14 @@ wget https://raw.githubusercontent.com/antaflos/puppet-foobar/master/Vagrantfile
 vagrant up
 ```
 
-Once the Vagrant VM is up connect to it and set up Git, PDK and clone the Puppet module
+Once the Vagrant VM is up connect to it and set up Git, PDK and clone the Puppet module, then run `pdk test unit`:
 
 ```
 vagrant ssh bionic01
-sudo -s
-apt-get update
-apt-get install git
+sudo apt-get update
+sudo apt-get install git
 wget http://apt.puppet.com/pool/bionic/puppet/p/pdk/pdk_1.13.0.0-1bionic_amd64.deb
-dpkg -i pdk_1.13.0.0-1bionic_amd64.deb
+sudo pkg -i pdk_1.13.0.0-1bionic_amd64.deb
 git clone https://github.com/antaflos/puppet-foobar
 cd puppet-foobar
 pdk test unit
